@@ -42,6 +42,8 @@ def save(rows):
 
 
 def note_for(row):
+    if row["note"]:
+        return row["note"]
     if row["set"] == "cold":
         note = "cold"
     elif row["label"] == row["ai_label"]:
@@ -127,6 +129,7 @@ def run(rows):
         else:
             print("  pick a number" + ("" if row["set"] == "cold" else ", or Enter to keep"))
             continue
+        row["note"] = ""
         save(rows)
         pos += 1
     print()
