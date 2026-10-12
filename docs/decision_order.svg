@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400" role="img" aria-label="Order of checks for labelling a comment" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#4B54A8" stroke-width="1.6"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#8A8A82" stroke-width="1.6"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="400" rx="14" fill="#FFFFFF" stroke="#E3E3DE"/>
+  <text x="30" y="42" font-size="20" font-weight="600" fill="#1A1A18">The order of checks for every comment</text>
+  <text x="30" y="66" font-size="13" fill="#6B6B64">Stop at the first yes. The order is the decision rule: experience is checked before evidence, and everything left is opinion.</text>
+  <rect x="30" y="100" width="200" height="78" rx="9" fill="#F4F4F1" stroke="#8A8A82"/>
+  <text x="130.0" y="126" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1A1A18">1. Wants an answer?</text>
+  <text x="130.0" y="146" text-anchor="middle" font-size="11.5" fill="#4A4A45">a real question,</text>
+  <text x="130.0" y="161" text-anchor="middle" font-size="11.5" fill="#4A4A45">not a challenge</text>
+  <rect x="270" y="100" width="200" height="78" rx="9" fill="#F4F4F1" stroke="#8A8A82"/>
+  <text x="370.0" y="126" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1A1A18">2. Happened to them?</text>
+  <text x="370.0" y="146" text-anchor="middle" font-size="11.5" fill="#4A4A45">I tried, I pay,</text>
+  <text x="370.0" y="161" text-anchor="middle" font-size="11.5" fill="#4A4A45">at my job we</text>
+  <rect x="510" y="100" width="200" height="78" rx="9" fill="#F4F4F1" stroke="#8A8A82"/>
+  <text x="610.0" y="126" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1A1A18">3. Anything checkable?</text>
+  <text x="610.0" y="146" text-anchor="middle" font-size="11.5" fill="#4A4A45">link, number, quote,</text>
+  <text x="610.0" y="161" text-anchor="middle" font-size="11.5" fill="#4A4A45">version, product behaviour</text>
+  <rect x="750" y="100" width="200" height="78" rx="9" fill="#F4F4F1" stroke="#8A8A82"/>
+  <text x="850.0" y="126" text-anchor="middle" font-size="13.5" font-weight="600" fill="#1A1A18">4. Nothing left</text>
+  <text x="850.0" y="146" text-anchor="middle" font-size="11.5" fill="#4A4A45">claim, joke, or</text>
+  <text x="850.0" y="161" text-anchor="middle" font-size="11.5" fill="#4A4A45">reasoning only</text>
+  <path d="M232 139.0 H268" fill="none" stroke="#8A8A82" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#g)"/>
+  <text x="250.0" y="132.0" text-anchor="middle" font-size="11.5" fill="#4A4A45">no</text>
+  <path d="M472 139.0 H508" fill="none" stroke="#8A8A82" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#g)"/>
+  <text x="490.0" y="132.0" text-anchor="middle" font-size="11.5" fill="#4A4A45">no</text>
+  <path d="M712 139.0 H748" fill="none" stroke="#8A8A82" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#g)"/>
+  <text x="730.0" y="132.0" text-anchor="middle" font-size="11.5" fill="#4A4A45">no</text>
+  <path d="M130.0 180 V260" fill="none" stroke="#4B54A8" stroke-width="1.4" marker-end="url(#a)"/>
+  <text x="136.0" y="224" text-anchor="start" font-size="11.5" fill="#4A4A45">yes</text>
+  <rect x="30" y="262" width="200" height="66" rx="9" fill="#EEF0FB" stroke="#4B54A8"/>
+  <text x="130.0" y="288" text-anchor="middle" font-size="13.5" font-weight="600" fill="#2A2F6B" font-family="SFMono-Regular, Menlo, Consolas, monospace">question</text>
+  <text x="130.0" y="308" text-anchor="middle" font-size="11.5" fill="#4A4A45">57 posts, 21%</text>
+  <path d="M370.0 180 V260" fill="none" stroke="#4B54A8" stroke-width="1.4" marker-end="url(#a)"/>
+  <text x="376.0" y="224" text-anchor="start" font-size="11.5" fill="#4A4A45">yes</text>
+  <rect x="270" y="262" width="200" height="66" rx="9" fill="#EEF0FB" stroke="#4B54A8"/>
+  <text x="370.0" y="288" text-anchor="middle" font-size="13.5" font-weight="600" fill="#2A2F6B" font-family="SFMono-Regular, Menlo, Consolas, monospace">experience</text>
+  <text x="370.0" y="308" text-anchor="middle" font-size="11.5" fill="#4A4A45">29 posts, 11%</text>
+  <path d="M610.0 180 V260" fill="none" stroke="#4B54A8" stroke-width="1.4" marker-end="url(#a)"/>
+  <text x="616.0" y="224" text-anchor="start" font-size="11.5" fill="#4A4A45">yes</text>
+  <rect x="510" y="262" width="200" height="66" rx="9" fill="#EEF0FB" stroke="#4B54A8"/>
+  <text x="610.0" y="288" text-anchor="middle" font-size="13.5" font-weight="600" fill="#2A2F6B" font-family="SFMono-Regular, Menlo, Consolas, monospace">evidence</text>
+  <text x="610.0" y="308" text-anchor="middle" font-size="11.5" fill="#4A4A45">47 posts, 17%</text>
+  <path d="M850.0 180 V260" fill="none" stroke="#4B54A8" stroke-width="1.4" marker-end="url(#a)"/>
+  <text x="856.0" y="224" text-anchor="start" font-size="11.5" fill="#4A4A45"></text>
+  <rect x="750" y="262" width="200" height="66" rx="9" fill="#EEF0FB" stroke="#4B54A8"/>
+  <text x="850.0" y="288" text-anchor="middle" font-size="13.5" font-weight="600" fill="#2A2F6B" font-family="SFMono-Regular, Menlo, Consolas, monospace">opinion</text>
+  <text x="850.0" y="308" text-anchor="middle" font-size="11.5" fill="#4A4A45">136 posts, 51%</text>
+  <text x="30" y="372" font-size="12" fill="#6B6B64">Counts are from labels.csv, 269 rows. question includes the 50 extra examples added as a stretch feature.</text>
+</svg>
