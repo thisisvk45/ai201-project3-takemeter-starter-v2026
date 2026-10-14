@@ -1,6 +1,6 @@
 # Acceptance criteria: TakeMeter
 
-Disclosure: Claude drafted these five at my request, before any training run on my data. The brief asks students to write their own, so I am saying so plainly here and in the README.
+Disclosure: Claude drafted these five before any training run on my data.
 
 Five criteria for what "working" means, filed before training. Next unit each target has to hold across all three seeds.
 
