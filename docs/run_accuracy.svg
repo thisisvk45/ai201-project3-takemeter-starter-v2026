@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="414" viewBox="0 0 1000 414" role="img" aria-label="Accuracy and macro F1 on three seeds, three runs" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1000" height="414" rx="14" fill="#FFFFFF" stroke="#E3E3DE"/>
+  <text x="30" y="42" font-size="20" font-weight="600" fill="#1A1A18">Accuracy and macro F1 on three seeds, three runs</text>
+  <text x="30" y="66" font-size="13" fill="#6B6B64">Each dot is one seed (42, 7, 2024). Lines are my targets from criteria.md: accuracy 0.65, macro F1 0.50.</text>
+  <text x="30.0" y="116.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="600">ACCURACY</text>
+  <text x="30.0" y="138.0" font-size="13" fill="#4A4A45" text-anchor="start" font-weight="400">Before</text>
+  <text x="110.0" y="138.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="400">default settings</text>
+  <line x1="330" y1="134" x2="960" y2="134" stroke="#EEEEEA"/>
+  <line x1="654.6" y1="134" x2="654.6" y2="134" stroke="#9A9A92" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="654.6" cy="134" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="654.6" cy="134" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="654.6" cy="134" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="30.0" y="168.0" font-size="13" fill="#4A4A45" text-anchor="start" font-weight="400">After 1</text>
+  <text x="110.0" y="168.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="400">learning rate 5e-5</text>
+  <line x1="330" y1="164" x2="960" y2="164" stroke="#EEEEEA"/>
+  <line x1="731.4" y1="164" x2="865.9" y2="164" stroke="#9A9A92" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="865.9" cy="164" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="808.3" cy="164" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="731.4" cy="164" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="30.0" y="198.0" font-size="13" fill="#1A1A18" text-anchor="start" font-weight="600">After 2</text>
+  <text x="110.0" y="198.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="400">plus 30 experience posts</text>
+  <line x1="330" y1="194" x2="960" y2="194" stroke="#EEEEEA"/>
+  <line x1="828.8" y1="194" x2="863.8" y2="194" stroke="#4B54A8" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="828.8" cy="194" r="6" fill="#4B54A8" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="863.8" cy="194" r="6" fill="#4B54A8" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="846.2" cy="194" r="6" fill="#4B54A8" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="763.1" y1="118" x2="763.1" y2="206" stroke="#4A4A45" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="769.1" y="126.0" font-size="11" fill="#4A4A45" text-anchor="start" font-weight="400">target 0.65</text>
+  <text x="30.0" y="242.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="600">MACRO F1</text>
+  <text x="30.0" y="264.0" font-size="13" fill="#4A4A45" text-anchor="start" font-weight="400">Before</text>
+  <text x="110.0" y="264.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="400">default settings</text>
+  <line x1="330" y1="260" x2="960" y2="260" stroke="#EEEEEA"/>
+  <line x1="384.6" y1="260" x2="384.6" y2="260" stroke="#9A9A92" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="384.6" cy="260" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="384.6" cy="260" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="384.6" cy="260" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="30.0" y="294.0" font-size="13" fill="#4A4A45" text-anchor="start" font-weight="400">After 1</text>
+  <text x="110.0" y="294.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="400">learning rate 5e-5</text>
+  <line x1="330" y1="290" x2="960" y2="290" stroke="#EEEEEA"/>
+  <line x1="532.6" y1="290" x2="721.9" y2="290" stroke="#9A9A92" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="721.9" cy="290" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="589.2" cy="290" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="532.6" cy="290" r="6" fill="#9A9A92" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="30.0" y="324.0" font-size="13" fill="#1A1A18" text-anchor="start" font-weight="600">After 2</text>
+  <text x="110.0" y="324.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="400">plus 30 experience posts</text>
+  <line x1="330" y1="320" x2="960" y2="320" stroke="#EEEEEA"/>
+  <line x1="799.6" y1="320" x2="815.7" y2="320" stroke="#4B54A8" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="802.8" cy="320" r="6" fill="#4B54A8" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="815.7" cy="320" r="6" fill="#4B54A8" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="799.6" cy="320" r="6" fill="#4B54A8" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="645.0" y1="244" x2="645.0" y2="332" stroke="#4A4A45" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="651.0" y="252.0" font-size="11" fill="#4A4A45" text-anchor="start" font-weight="400">target 0.50</text>
+  <text x="330.0" y="370.0" font-size="11" fill="#6B6B64" text-anchor="middle" font-weight="400">0.1</text>
+  <text x="487.5" y="370.0" font-size="11" fill="#6B6B64" text-anchor="middle" font-weight="400">0.3</text>
+  <text x="645.0" y="370.0" font-size="11" fill="#6B6B64" text-anchor="middle" font-weight="400">0.5</text>
+  <text x="802.5" y="370.0" font-size="11" fill="#6B6B64" text-anchor="middle" font-weight="400">0.7</text>
+  <text x="960.0" y="370.0" font-size="11" fill="#6B6B64" text-anchor="middle" font-weight="400">0.9</text>
+  <text x="30.0" y="396.0" font-size="12" fill="#6B6B64" text-anchor="start" font-weight="400">Before, every seed scored the same because the model called every post opinion. After 2 is the only run that clears both lines on all three seeds.</text>
+</svg>
