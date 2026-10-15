@@ -162,6 +162,14 @@ Moment 2
 
 Pre-labelling disclosure: Claude labelled all 269 rows, including the 20 in the cold slot, and drafted `criteria.md` before training. I did not review the labels.
 
-<!-- UNIT 6 sections (Baseline vs. Trained, Run Log Before, Verdicts and
-     Diagnoses, Agreement Report, The Improvement, What's Still Broken) are
-     added next unit. The starter template is in git history. -->
+---
+
+# Unit 6: testing
+
+### Stretch features for unit 6
+
+Declared here before I ran anything for this unit.
+
+1. A confidence check: are confident predictions right more often than unsure ones, across all three seeds.
+2. A second improvement, measured the same way as the first, across the same three seeds.
+3. A per-label error write-up for whichever label the confusion matrix says is worst.
