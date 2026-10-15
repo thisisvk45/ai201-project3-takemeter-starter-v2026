@@ -177,3 +177,147 @@ Declared here before I ran anything for this unit.
 ## Baseline vs. Trained
 
 What I predicted before I looked at the comparison: the default trained model from unit 5 already called every test post `opinion`, so I expected it to beat the baseline only on `opinion` F1 and lose everywhere else.
+
+Both columns are scored on the same 41 posts in `test_split.csv`. Baseline is `facebook/bart-large-mnli`, zero-shot, with my four definitions from `label_definitions.txt` as the candidate labels. Trained is the unit 5 default run, `results.json`.
+
+| Measure | Baseline | Trained | Difference |
+|---|---|---|---|
+| Overall accuracy | 0.317 | 0.512 | +0.195 |
+| Macro F1 | 0.257 | 0.169 | -0.088 |
+| F1 `evidence` | 0.350 | 0.000 | -0.350 |
+| F1 `experience` | 0.000 | 0.000 | +0.000 |
+| F1 `opinion` | 0.250 | 0.677 | +0.427 |
+| F1 `question` | 0.429 | 0.000 | -0.429 |
+
+The same baseline with bare label names instead of my definitions (`baseline_results_bare_names.json`): accuracy 0.585, macro F1 0.456.
+
+What the gap actually means: neither model is good. The trained model wins on accuracy only because it says `opinion` for everything and half the posts are `opinion`. The baseline with my definitions called 33 of 41 posts `evidence`. My `evidence` definition is the longest and most general sentence of the four, and the zero-shot model reads almost any comment as entailing it. The bare names did better than my definitions by 0.268 accuracy, so as a prompt my definitions were worth less than nothing. They are written for a human labeller, not for an entailment model.
+
+---
+
+## Run Log: Before
+
+Default settings (3 epochs, learning rate 2e-5, batch 16), seeds 42, 7 and 2024, device `cpu`. File: `results_three_seeds_before.json`. I ran the notebook's section 6 one seed at a time with `scripts/run_seeds.py`, because my VM stops any job longer than three minutes. It uses the notebook's own code, and seed 42 reproduces `results.json` exactly.
+
+| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
+|---|---|---|---|---|---|
+| 1. Overall accuracy | ≥ 0.65 | 0.512 | 0.512 | 0.512 | MISSED |
+| 2. Macro F1 | ≥ 0.50 | 0.169 | 0.169 | 0.169 | MISSED |
+| 3. F1 `question` and `evidence` ≥ 0.60, `experience` ≥ 0.35 | all three | 0.00 / 0.00 / 0.00 | 0.00 / 0.00 / 0.00 | 0.00 / 0.00 / 0.00 | MISSED |
+| 4. Most confident third minus least confident third | ≥ 0.15 | 0.615 | 0.615 | 0.154 | MET |
+| 5. True `evidence` and `experience` predicted `opinion` | ≤ 30% | 100% (11/11) | 100% (11/11) | 100% (11/11) | MISSED |
+
+### Confusion matrix
+
+Seed 42. Seeds 7 and 2024 are identical.
+
+| true \ predicted | evidence | experience | opinion | question |
+|---|---|---|---|---|
+| evidence | 0 | 0 | 7 | 0 |
+| experience | 0 | 0 | 4 | 0 |
+| opinion | 0 | 0 | 21 | 0 |
+| question | 0 | 0 | 9 | 0 |
+
+My biggest off-diagonal number, and what it means: 9 real `question` posts were called `opinion` and none went the other way. That is not one boundary failing. The whole column is `opinion`, so the model learned the majority class and no boundary at all.
+
+---
+
+## Verdicts and Diagnoses
+
+| # | Criterion | Target | Verdict | How I decided |
+|---|---|---|---|---|
+| 1 | Overall accuracy | ≥ 0.65 | MISSED | 0.512 on all three seeds, which is exactly the share of `opinion` |
+| 2 | Macro F1 | ≥ 0.50 | MISSED | 0.169 on all three seeds |
+| 3 | Per-label F1 | `question`, `evidence` ≥ 0.60; `experience` ≥ 0.35 | MISSED | all three labels 0.00 on every seed |
+| 4 | Confidence gap | ≥ 0.15 | MET | 0.615, 0.615, 0.154. All three clear 0.15, seed 2024 by 0.004 |
+| 5 | Evidence and experience swallowed by `opinion` | ≤ 30% | MISSED | 100% on every seed |
+
+Diagnoses
+
+Criteria 1, 2, 3 and 5 share one cause: the model never moved off the majority class. The evidence:
+
+1. The confusion matrix is identical on three different splits, with every post predicted `opinion`.
+2. Validation accuracy sat at 0.512 after every epoch, while training loss was still falling (1.31 to 1.13). At 2e-5 for 36 steps the classifier head had not moved far enough to separate anything.
+3. In unit 5, raising only the learning rate on seed 42 learned `evidence` and `question` straight away.
+
+So this is not one of the label problems. A model that predicts one class gives no evidence about which boundary is inconsistent, and the agreement report can't help here either. Of the four common causes, the closest is "a task the model can't reach from this much data", but the cause sits in the training settings, not in the data size. That is why my one improvement is a training setting.
+
+Criterion 4 is MET, but for a hollow reason. When everything is predicted `opinion`, the confident third is mostly real `opinion` posts, so it scores well. The criterion was measurable, so I am not revising it, but the MET says nothing about whether the model's confidence means anything.
+
+---
+
+## Agreement Report
+
+My labels on the 30 staff posts, under the staff taxonomy, are in `my_staff_labels.csv`. They were committed before the staff labels were available. I am waiting on `data/staff_labels.csv` from my TF. This section gets the rate and an adjudication of every disagreement once it arrives.
+
+---
+
+## The Improvement
+
+What I changed: learning rate 2e-5 to 5e-5 in section 2 of the notebook. Nothing else. Same labels, same three seeds. File: `results_three_seeds_after.json`.
+
+Which diagnosis pointed at it: every before run collapsed to `opinion`, with the loss still falling. That points at training, not labels.
+
+### Run Log: After
+
+| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
+|---|---|---|---|---|---|
+| 1. Overall accuracy | ≥ 0.65 | 0.780 | 0.707 | 0.610 | MISSED |
+| 2. Macro F1 | ≥ 0.50 | 0.598 | 0.429 | 0.357 | MISSED |
+| 3. F1 `question` / `evidence` / `experience` | 0.60 / 0.60 / 0.35 | 0.82 / 0.73 / 0.00 | 0.95 / 0.00 / 0.00 | 0.74 / 0.00 / 0.00 | MISSED |
+| 4. Confidence gap | ≥ 0.15 | 0.154 | 0.231 | 0.231 | MET |
+| 5. Evidence and experience called `opinion` | ≤ 30% | 55% (6/11) | 100% (11/11) | 100% (11/11) | MISSED |
+
+Did it help, and how do I know: yes, partly. The model stopped guessing one class. `question` was learned on all three seeds (F1 0.74 to 0.95) and accuracy rose by 0.10 to 0.27. No criterion flipped from MISSED to MET. `evidence` was learned on seed 42 only, and `experience` on no seed. Accuracy now moves 0.171 across seeds, more than 10 points, so with 21 training examples of `experience` and 33 of `evidence`, the dataset is too thin for a stable measure.
+
+### Second improvement (stretch): 30 more `experience` examples
+
+What I changed: on top of the learning rate change, I added 30 `experience` comments from 40 further threads (`scripts/collect_hn.py --experience`, `data/hn_experience.jsonl`). `experience` was the label every run missed. `labels.csv` went from 269 to 299 rows, labelled the same way as before. File: `results_three_seeds_after2.json`. The test split is now 45 posts with 9 `experience` instead of 4, so this log is not on exactly the same posts as the two above.
+
+| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
+|---|---|---|---|---|---|
+| 1. Overall accuracy | ≥ 0.65 | 0.733 | 0.778 | 0.756 | MET |
+| 2. Macro F1 | ≥ 0.50 | 0.700 | 0.717 | 0.696 | MET |
+| 3. F1 `question` / `evidence` / `experience` | 0.60 / 0.60 / 0.35 | 0.82 / 0.55 / 0.67 | 0.95 / 0.44 / 0.67 | 0.94 / 0.44 / 0.62 | MISSED |
+| 4. Confidence gap | ≥ 0.15 | 0.200 | 0.067 | 0.267 | MISSED |
+| 5. Evidence and experience called `opinion` | ≤ 30% | 44% (7/16) | 50% (8/16) | 63% (10/16) | MISSED |
+
+Did it help: yes. `experience` went from 0.00 on every seed to 0.62 to 0.67. Criteria 1 and 2 are now MET on all three seeds, and the accuracy spread dropped from 0.171 to 0.044. `evidence` is now the worst label. Criterion 4 went from MET to MISSED on seed 7 (0.067), so a model that actually separates labels is less sure of itself than the one that guessed `opinion`.
+
+### Confidence check (stretch)
+
+From the `confidence` block in each results file, accuracy on the most confident third against the least confident third:
+
+| Run | Seed 42 | Seed 7 | Seed 2024 |
+|---|---|---|---|
+| Before | 0.769 vs 0.154 | 0.769 vs 0.154 | 0.538 vs 0.385 |
+| After | 0.769 vs 0.615 | 0.769 vs 0.538 | 0.692 vs 0.462 |
+| After 2 | 0.800 vs 0.600 | 0.800 vs 0.733 | 0.933 vs 0.667 |
+
+The confident third is right more often in all nine runs, so confidence carries some signal. The size of the gap is not stable, though. In the before runs it was large only because confidence tracked "is this an `opinion` post". In the after 2 runs the least confident third is already right two thirds of the time, which leaves less room for a gap. Each third is 13 to 15 posts, so one post moves the number by about 0.07.
+
+### Per-label error write-up: `evidence` (stretch)
+
+`evidence` is the worst label after improvement 2 (F1 0.44 to 0.55). From `predictions_after2_seed42.json`, 3 of 7 `evidence` posts were right and 4 were wrong:
+
+1. The 3 it got right all carry a visible artifact: an h1bdata link, a jellyfin.org docs link, and a pasted benchmark table.
+2. 3 went to `opinion`. Each states a checkable fact in plain prose with no link or number up front: the OpenStreetMap licence wording, the potato not growing in the Papua lowlands, iMessage-only parental controls.
+3. 1 went to `question`. It is the SHA-1 post, which opens with "What then?" and only cites the TLS handshake later.
+
+So the model learned "has a URL, number or table" rather than "has a fact a reader could check". My definition covers both, but with 33 training examples the surface signal is the one it can find.
+
+---
+
+## What's Still Broken
+
+Criterion 3 (`evidence` F1 under 0.60) and criterion 5 (44% to 63% of `evidence` and `experience` still called `opinion`) are missed. Next I would add 30 `evidence` posts that state a fact without a link, the exact kind it misses. I would also do the human review pass on `labels.csv` with `scripts/review.py`. No person has checked these labels, and the `evidence` and `opinion` boundary is where an unchecked label is most likely wrong. I stopped at two improvements because the brief allows one change plus the declared stretch.
+
+Criterion 4 (confidence gap) is missed on seed 7 after improvement 2. I would not chase it. With 15 posts per third it moves 0.07 per post, and a fix would mean tuning on the test set.
+
+The gap between what I meant my labels to capture and what the model learned: I meant `evidence` to mean "something a reader could check" and `experience` to mean "it happened to the writer". The model learned "has a link or a table" and "says I tried or I use". Short first hand posts with no "I", like "Love that the chat functionality is just throwing 429s too. Unusable.", still go to `opinion`. So does every `evidence` post written as plain prose.
+
+---
+
+## How I Used AI in unit 6
+
+Claude ran the baseline and the three seed runs, labelled the 30 staff posts under the staff taxonomy before the staff labels were available, collected and labelled the 30 extra `experience` posts, and drafted the verdicts, diagnoses and write-ups above from the result files. The numbers are copied from the committed JSON files.
