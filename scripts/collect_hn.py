@@ -7,6 +7,10 @@ one go. Usernames are not saved.
 --questions pulls from a different set of stories and keeps only comments that
 ask something (a question mark plus a question opener). I used it for the 50
 extra examples of my thinnest label, written to data/hn_questions.jsonl.
+
+--experience does the same for first hand reports (I tried, I've been using,
+in my experience, at work we), from a third set of stories. It was used for the
+unit 6 second improvement, written to data/hn_experience.jsonl.
 """
 import html, json, random, re, sys, time, urllib.request
 from pathlib import Path
@@ -14,6 +18,7 @@ from pathlib import Path
 API = "https://hn.algolia.com/api/v1"
 DATA = Path(__file__).resolve().parent.parent / "data"
 OUT = DATA / "hn_raw.jsonl"
+TOLD = re.compile(r"\b(I tried|I've been using|I have been using|I used to|in my experience|at work we|at my (job|work|company)|I switched|I bought|I ran|I tested|I've used|I've had|we use|we used|I own|I've owned)\b", re.I)
 ASKS = re.compile(r"(^|[.!?]\s+)(does|do|is|are|can|could|how|what|why|which|where|has|have|any|anyone|would|will|should)\b[^.!?]*\?", re.I)
 PER_STORY = 10
 STORIES = 45
@@ -34,7 +39,8 @@ def clean(text):
 def walk(node, story, out, questions=False):
     for child in node.get("children") or []:
         body = clean(child.get("text"))
-        if questions and not ASKS.search(body):
+        pattern = TOLD if questions == "experience" else ASKS
+        if questions and not pattern.search(body):
             walk(child, story, out, questions)
             continue
         if child.get("type") == "comment" and (40 if questions else 60) <= len(body) <= 700:
@@ -44,8 +50,8 @@ def walk(node, story, out, questions=False):
 
 
 def main():
-    questions = "--questions" in sys.argv
-    out_path = DATA / "hn_questions.jsonl" if questions else OUT
+    questions = "experience" if "--experience" in sys.argv else "--questions" in sys.argv
+    out_path = {"experience": DATA / "hn_experience.jsonl", True: DATA / "hn_questions.jsonl"}.get(questions, OUT)
     per_story = 4 if questions else PER_STORY
     random.seed(5)
     start = int(time.mktime((2026, 9, 1, 0, 0, 0, 0, 0, -1)))
@@ -53,7 +59,10 @@ def main():
     hits = get(f"{API}/search?tags=story&numericFilters=created_at_i>{start},created_at_i<{end},num_comments>80&hitsPerPage=200")["hits"]
     random.shuffle(hits)
     rows = []
-    picked = hits[STORIES:STORIES + 40] if questions else hits[:STORIES]
+    if questions == "experience":
+        picked = hits[STORIES + 40:STORIES + 80]
+    else:
+        picked = hits[STORIES:STORIES + 40] if questions else hits[:STORIES]
     for story in picked:
         found = []
         walk(get(f"{API}/items/{story['objectID']}"), story, found, questions)
