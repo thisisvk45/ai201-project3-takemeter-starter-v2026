@@ -1,0 +1,227 @@
+[
+  {
+    "text": "No one even mentioned the Trump administration. The major connection is through the Supreme Court.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "click on the link:\n\n> Licences that are not compatible\n\n> Licences that require downstream attribution\n\n> For practical reasons we require that users of OpenStreetMap data attribute the project as a whole and we in turn provide attribution to third parties via the \"Contributor\" pages. Licences and terms of use that require attribution of the third party data source directly on derived works are incompatible.\n\n\"require attribution of the third party data source directly on derived works\" is exactly what OSM requires. It's hypocrisy of a sorts",
+    "gold": "evidence",
+    "predicted": "opinion"
+  },
+  {
+    "text": "It is perhaps a blessing that the climate of the Papua lowlands makes the potato impossible to grow. While the potato would grow in the cooler highlands, this village to village transmission mechanism would not get the potato past the hot lowlands where plants would rot in the ground. The potato yields a lot more calories per hectare than the sweet potato, and when introduced to New Zealand, fueled massive wars.",
+    "gold": "evidence",
+    "predicted": "opinion"
+  },
+  {
+    "text": "When sharing summaries from calls that I attended but my team has not but I think they would find interesting and I simply don't have time to handcraft it myself I use LLM and attach my prompt and the transcript.\n\nAttaching the prompt initially threw some people...\"wait, your admitting to using AI...\"...\"err yea, unlike you with that PowerPoint you sent me last week\". I sense this is the right way to go imho.",
+    "gold": "experience",
+    "predicted": "opinion"
+  },
+  {
+    "text": "Highly agree.\n\nI keep saying \u201cI\u2019d be so\nHappy with ${currentOpusVersion} locally\u201d, but I keep being impressed with how much the capabilities change between versions. I have a RTX 6000 pro so I can easily run this qwen 3.8 flash next, but it\u2019s much harder to give up the freedom that 5.5 gives me.",
+    "gold": "experience",
+    "predicted": "experience"
+  },
+  {
+    "text": "| Benchmark \u2502 Ninfer-3090 \u2502 Strata |\n\n| --------- \u2502 ----------- \u2502 ------ |\n\n\u2502 Code generation \u2502 52/78 (66.7%) \u2502 70/78 (89.7%) |\n\n\u2502 Code completion \u2502 40/50 (80.0%) \u2502 44/50 (88.0%) |\n\n\u2502 Total \u2502 92/128 (71.9%) \u2502 114/128 (89.1%) |\n\n\u2502 API failures \u2502 10 \u2502 5 |\n\nI wish Markdown tables worked here.",
+    "gold": "evidence",
+    "predicted": "evidence"
+  },
+  {
+    "text": "I genuinely don't understand how some people are so self-hating.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "I work on an open source app that uses a shared swift core for the iOS and android apps and I think it's awesome. I think having all your business logic in swift is great.\n\nAt work, we use react native, and although the upgrades and stuff are painful, I'd never give up the ability to ship over the air updates.",
+    "gold": "experience",
+    "predicted": "experience"
+  },
+  {
+    "text": ">Google is doing everything possible to juice their revenue right now, in ways they've never seen before\n\nMy experience confirms this: many years ago I had a website banned from serving Google Ads. They said my pages didn't have enough content.\n\nThen a competitor started showing ads on the exact same type of pages where I had previously been able to serve them. So I tried getting my website approved again and -- surprise -- now I can serve ads again.",
+    "gold": "experience",
+    "predicted": "experience"
+  },
+  {
+    "text": "Sure but that's just kicking the can down the street. It will eventually be susceptible to a collision attack. As will SHA256 btw. What then? Are we doing to go through all this again?\n\nOnline video has handled this. There are various codex, container formats and transport protocols. The TLS handshake does this. The ability to deprecate and replacing the hashing algorithm should've been built in from day 1.",
+    "gold": "evidence",
+    "predicted": "question"
+  },
+  {
+    "text": "Already followed your tip but still saw an Ikea ad in Skyrim today.",
+    "gold": "experience",
+    "predicted": "opinion"
+  },
+  {
+    "text": "If I make the path behind my home publicly accessible so people in our town can get where they\u2019re going easier, then Amazon builds a warehouse in our town and starts driving their trucks through my path 24/7, are you going to tell me \u201cwell you made it public access, they have a right to it same as everyone\u201d?\n\nWith the advent of trillion dollar corporations selling extremely powerful general purpose imitation as a service, the meaning of \u201cpublic access\u201d has substantially changed, potentially invalidating the original agreement.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "i love that we get these comments, even 20 years later. the phone costs what many (most? even?) folks on HN make in a day, after taxes.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "> We can round up the bits that make up a commit in a SHA-1-based repo, and sign those bits securely; this is a thing that is possible.\n\nYes but as my other comment explains, this is not particularly useful in and of itself.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "My least favorite part is how the parental controls are locked into iMessage.  There's no way to manage parental controls from anything other than another iDevice.  I suppose this is a sales strategy for them - parent must buy an iDevice as well.",
+    "gold": "evidence",
+    "predicted": "opinion"
+  },
+  {
+    "text": "Is the Gemini CLI still terrible compared to Claude Code and Codex? The harness the main thing holding back Google models as they could've been the best given all the advantages in compute capacity and training data they initially had, where now even the Google CEO said they're falling behind in agentic tasks, which is sort of a vicious cycle because RLHF relies on human usage.",
+    "gold": "question",
+    "predicted": "opinion"
+  },
+  {
+    "text": "What do you mean by seeding it manually? Like do you programmatically \"browse\" to bolster your hister index? Asking because I started using hister a month or so ago and have been really liking it, and I'm curious how others are using it.",
+    "gold": "question",
+    "predicted": "question"
+  },
+  {
+    "text": "I don't think that's a generous way to interpret it.\n\nI see it more as: every day they will go on the slack channel and pause, wondering \"Is there a neat trick I've learned or used recently?\" then they share it. It's like a ritual to remember that you can share things because it's easy to forget other people don't work the same way you do. Writing it all at once is difficult (you have to remember a lot of stuff at once) and it tends to go unread.\n\nI also think every single day is a stretch, but it's nice to pause once in a while to think about how you could help other people with something you've learned.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "How do I get access to that reset? I can\u2019t find it in my app.",
+    "gold": "question",
+    "predicted": "question"
+  },
+  {
+    "text": "Are you sure? At least with Kodi for specials like Futurama you make a Season 0 with them that the scrapers understand. Seems like Jellyfin understands that too: https://jellyfin.org/docs/general/server/media/shows\n\nI guess for Theatrical TV show movies like The Simpsons Movie it might be more complicated, but worse case you always create or edit your own NFO files with something like MediaElch and have Jellyfin use those.\n\nI think it's better to have genres in the NFO files and not in the folder structure. A show or movie can easily fall into two or genres which is not going to get captured by a single folder.",
+    "gold": "evidence",
+    "predicted": "evidence"
+  },
+  {
+    "text": "This technology is very powerful, and it is (and by extension, so are we) very valuable\n\nAlso good story telling for the narrative of \u201cthis technology is so powerful that it must be strictly regulated\u201d",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "The Russian crimes were NOT equal to Nazi germany, and I didn\u2019t state as much. They were very very very bad though.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "Probably not, but then again I have an ego, and I have other things going on in my life than decrypting random stuff for someone else's enjoyment. Both of which aren't true for an agent/LLM.\n\nIt's a machine - when we attribute it human concepts such as victory, mistakes, ethics, we also shift responsibility away from the operator and soon enough bad people will use it as an umbrella. The agent ate my homework! The agent bombed a school! Bad agent, no!",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "I didnt understand that because the parent comment made no mention of that, only the time the bank took. So I would argue you dont understand, as maybe some banks do charge for the privilege, but that is not the point that was made and I was replying to.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "What do you think would be a better title?\n\nThe metaphor seems to be like a pacer runner in marathons: If you run too hard in the beginning of a marathon you will blow up and fail, so runners follow a pacer at the speed they can actually maintain safely.\n\nNote that they wont necessarily be slower at finishing the overall race.",
+    "gold": "question",
+    "predicted": "opinion"
+  },
+  {
+    "text": "IIRC then normal bank cards and debit cards can be charged with these future payments up to 500 Eur. So for small and normal cars this works.\n\nI too have a real credit card to be able to rent for instance \"bigger\" cars like even an Audi A6.\n\nMost often hotels also block 500 Eur, or they state upfront that you need a proper/real credit card and not just a debit card.\n\nThat's for me the only reason I have VISA and use it like 3 or 4 times a year...",
+    "gold": "experience",
+    "predicted": "experience"
+  },
+  {
+    "text": "I thought for sure a popup was going to appear asking me to log in with Games For Windows Live!",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "Comic aside, I can\u2019t help but wonder how come these one-off websites are all using .ai domain when at the latest check they cost $80 per year with minimum 2 year commitment. So $160 for a comic that is at best few news cycles away from redundant, and at best a recurring comic series about AI..? Why not just use a cheap tld like .fyi or .art, or something.\n\nHere I am trying to find appropriate AI prefix or suffix so that I can continue using .com , while these pet projects are all flaunting .ai domains",
+    "gold": "opinion",
+    "predicted": "experience"
+  },
+  {
+    "text": "Ok if the real experts were the reason we couldn't have what we have today, I'm glad we got rid of the experts. The new design is absolutely brilliant.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "> You have drawn a girl, born in the Levant in 1042 CE.\n\n> She was born, married at 18, had 4 children, lost her mother at 28, was orphaned at 41, was widowed at 70, and died at 71 of heart failure (degenerative illness), with 3 surviving children and 9 grandchildren.\n\nFirst try.  Honestly I'm going to call this a W under the circumstances.",
+    "gold": "experience",
+    "predicted": "opinion"
+  },
+  {
+    "text": "https://h1bdata.info/index.php?em=microsoft+corporation&job=...\n\nIdk if people don't realize you can look this up? Pay doesn't look suppressed to me....",
+    "gold": "evidence",
+    "predicted": "evidence"
+  },
+  {
+    "text": "Right, Sending off my data to some random 3rd party company with far lower stakes does not make me feel better.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "Would model values like 'openrouter/pareto-code' or 'openrouter/auto' be of any help?",
+    "gold": "question",
+    "predicted": "question"
+  },
+  {
+    "text": "Ah civ 1. Been chasing that high ever since. I talked my parents into buying a 486sx \u201cfor school\u201d but I made sure it met the min reqs for civ. I put that packard bell through so much.",
+    "gold": "experience",
+    "predicted": "experience"
+  },
+  {
+    "text": "Love that the \"chat\" functionality is just throwing 429s too. Unusable.",
+    "gold": "experience",
+    "predicted": "opinion"
+  },
+  {
+    "text": "What are the useful applications of Jev so far? Not to sound dismissive, I just haven\u2019t seen what people are using it for yet.",
+    "gold": "question",
+    "predicted": "question"
+  },
+  {
+    "text": "always thought the spotify ui was really really good, it just has way more features and feels like it is made by a great team that actually uses the app and has input over it's design, vs apple music which is just a normal app that feels like it was made by a committee",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "Is there anyway to add a fullscreen button maybe near the open viewer/open in new window button? I used to use a similar app called bigtext.net (it's now gone, so that URL just goes to an ad), and they had a button that let you go fullscreen on a mobile browser in the non-PWA view.",
+    "gold": "question",
+    "predicted": "question"
+  },
+  {
+    "text": "Because you're not understanding the goal. The goal isn't to assist humans in making the discovery. The goal is to develop a system that can autonomously make the discoveries, as this is way more scalable.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "> The issuing bank keeps 2%\n\nIs this why the best cash back credit cards give 2%?",
+    "gold": "question",
+    "predicted": "question"
+  },
+  {
+    "text": "If Apple wanted to make the OS more secure, they would make the OS more modular, allowing users to reduce the surface risk by not installing bloated components",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "Please point me to the timestamp in that video that supports this claim:\n\n> reports of TVs and other devices automatically creating mesh networks. Your disconnected TV could talk to your neighbour's connected one.",
+    "gold": "opinion",
+    "predicted": "evidence"
+  },
+  {
+    "text": "How many of those extended processes ended in a no?",
+    "gold": "question",
+    "predicted": "question"
+  },
+  {
+    "text": "Yes it is; that\u2019s what I was thinking when I started to comment but somehow I ended up reversing course. Comment is appropriately edited now.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  },
+  {
+    "text": "Not bad!\nDid you ever read Stephen King\u2019s short autobiographical story on how he sold his first few stories? He had to be persistent as could be, just years of writing and submitting to publishers and getting rejected. It is a good read.",
+    "gold": "opinion",
+    "predicted": "opinion"
+  }
+]

@@ -9,6 +9,7 @@ change made there is what gets measured.
     python scripts/run_seeds.py --label before --seed 42      # one seed
     python scripts/run_seeds.py --label before --assemble     # write results_three_seeds_before.json
     python scripts/run_seeds.py --label before --report       # sections 6 and 7 printouts
+    python scripts/run_seeds.py --label after2 --seed 42 --errors   # also save every test post's guess
 """
 import argparse, ast, json, sys
 from pathlib import Path
@@ -44,7 +45,7 @@ def setup():
     return g, cells
 
 
-def run_one(label, seed):
+def run_one(label, seed, errors=False):
     g, _ = setup()
     tr, va, te = g["split_dataset"](g["df"], seed)
     t, tok = g["train_model"](tr, va, g["LABELS"], seed, g["EPOCHS"], g["LEARNING_RATE"],
@@ -54,6 +55,15 @@ def run_one(label, seed):
              torch_version=g["torch"].__version__, max_length=g["MAX_LENGTH"],
              settings={"epochs": g["EPOCHS"], "learning_rate": g["LEARNING_RATE"],
                        "batch_size": g["BATCH_SIZE"], "rows": len(g["df"])})
+    if errors:
+        import numpy as np
+        from datasets import Dataset
+        ds = Dataset.from_pandas(g["to_ids"](te, g["LABELS"])).map(
+            lambda b: tok(b["text"], truncation=True, padding="max_length", max_length=g["MAX_LENGTH"]), batched=True)
+        pred = np.argmax(t.predict(ds).predictions, axis=-1)
+        rows = [{"text": x, "gold": y, "predicted": g["LABELS"][int(p)]}
+                for x, y, p in zip(te["text"], te["label"], pred)]
+        (ROOT / f"predictions_{label}_seed{seed}.json").write_text(json.dumps(rows, indent=2))
     PARTS.mkdir(parents=True, exist_ok=True)
     (PARTS / f"{label}_{seed}.json").write_text(json.dumps(r, indent=2))
     print(f"seed {seed}: accuracy {r['accuracy']:.3f}   macro F1 {r['f1_macro']:.3f}")
@@ -80,9 +90,10 @@ if __name__ == "__main__":
     p.add_argument("--seed", type=int)
     p.add_argument("--assemble", action="store_true")
     p.add_argument("--report", action="store_true")
+    p.add_argument("--errors", action="store_true")
     a = p.parse_args()
     if a.seed is not None:
-        run_one(a.label, a.seed)
+        run_one(a.label, a.seed, a.errors)
     if a.assemble:
         assemble(a.label)
     if a.report:
