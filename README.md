@@ -173,3 +173,7 @@ Declared here before I ran anything for this unit.
 1. A confidence check: are confident predictions right more often than unsure ones, across all three seeds.
 2. A second improvement, measured the same way as the first, across the same three seeds.
 3. A per-label error write-up for whichever label the confusion matrix says is worst.
+
+## Baseline vs. Trained
+
+What I predicted before I looked at the comparison: the default trained model from unit 5 already called every test post `opinion`, so I expected it to beat the baseline only on `opinion` F1 and lose everywhere else.

@@ -1,0 +1,245 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 41,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 41,
+    "accuracy": 0.3170731707317073,
+    "f1_macro": 0.2571428571428571,
+    "per_label": {
+      "evidence": {
+        "precision": 0.21212121212121213,
+        "recall": 1.0,
+        "f1": 0.35,
+        "support": 7
+      },
+      "experience": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "opinion": {
+        "precision": 1.0,
+        "recall": 0.14285714285714285,
+        "f1": 0.25,
+        "support": 21
+      },
+      "question": {
+        "precision": 0.6,
+        "recall": 0.3333333333333333,
+        "f1": 0.42857142857142855,
+        "support": 9
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "That's nonsense. It's imparted us with incredible prosperity and peace. The US is a much poorer and worse nation due to you and your kind destroying what we built.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "This technology is very powerful, and it is (and by extension, so are we) very valuable\n\nAlso good story telling for the narrative of \u201cthis technology is so powerful that it must be strictly regulated\u201d",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "It is perhaps a blessing that the climate of the Papua lowlands makes the potato impossible to grow. While the potato would grow in the cooler highlands, this village to village transmission mechanism would not get the potato past the hot lowlands where plants would rot in the ground. The potato yields a lot more calories per hectare than the sweet potato, and when introduced to New Zealand, fueled massive wars.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Which bank? My main bank (I'm also in Spain) is BBVA which is able to do charge backs with my debit cards as well. Was possible with Banc Sabadell I used to have as well, really strange to hear there is a bank that doesn't support that today with debit cards.",
+      "gold": "question",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Highly agree.\n\nI keep saying \u201cI\u2019d be so\nHappy with ${currentOpusVersion} locally\u201d, but I keep being impressed with how much the capabilities change between versions. I have a RTX 6000 pro so I can easily run this qwen 3.8 flash next, but it\u2019s much harder to give up the freedom that 5.5 gives me.",
+      "gold": "experience",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Is \"normies\" finally a mainstream word? Just wondering how out of the loop I am here.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "My least favorite part is how the parental controls are locked into iMessage.  There's no way to manage parental controls from anything other than another iDevice.  I suppose this is a sales strategy for them - parent must buy an iDevice as well.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "What I'd love to see is this done for DS4.1 Flash.\n\nThat would bring it down to the point where it can fit in 128GB on things like the Spark or Strix Halo.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "> I would bet my networth it was instructed to compromise huggingface as well. Not sure why everyone is falling for this.\n\n$10? I'm inclined to take that bet. Your position doesn't seem to be supported by, you know, the real world.",
+      "gold": "opinion",
+      "predicted": "opinion"
+    },
+    {
+      "text": "All FOSS consumer operating systems suck. We only tolerate them because they are FOSS.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "What is that effect called where text \"glitches\" with like chromatic abberation around the edges... SGRRK",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "JFC I hate this so much. Why can't they simply add a setting to disable this.",
+      "gold": "opinion",
+      "predicted": "question"
+    },
+    {
+      "text": "You're all over this thread posting this same thing but you admitted that to you, \"trivial\" means substantial reverse engineering.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "When sharing summaries from calls that I attended but my team has not but I think they would find interesting and I simply don't have time to handcraft it myself I use LLM and attach my prompt and the transcript.\n\nAttaching the prompt initially threw some people...\"wait, your admitting to using AI...\"...\"err yea, unlike you with that PowerPoint you sent me last week\". I sense this is the right way to go imho.",
+      "gold": "experience",
+      "predicted": "evidence"
+    },
+    {
+      "text": "> A good consideration; just one point from my side: as far as I am aware (but I may be wrong), Gemini is not known to perform well in an agentic framework.\n\nI used it for a month over the summer, right before they were going through the migration to antigravity. It was a fine workhorse IMO, no complaints from me.",
+      "gold": "experience",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Wait, is NS solved? I thought I was just a singularity thing?",
+      "gold": "question",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I'm gonna invoke Hanlon's handgun here: not attributing stupidity to what's adequately explained by systemic incentives promoting malice.\n\nI normally assume people make mistakes. I don't believe this is a good explanation for news publications, university press releases, politicians, etc. because those are organizations with agenda, and commit \"misunderstanding\" of this type pretty much in every thing they publish. The pattern here is pretty conclusive, IMO.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "But do you think this is our first rodeo with \"XYZ has fundamentally shifted things and startups now start up faster\"? RoR did the same, Bootstrap as well, and countless of other things.\n\nDon't get me wrong, I leverage these AI tools as well to be more productive, I'm not against using it or anything else. But I'm also old enough to know that eventually AI will be \"old news\" when the next hot topic comes around.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": ">why are we worried about the virus but not the incompetency of those who are responsible for setting up the sandbox?\n\nbecause we know that in one year, there will likely be many more companies with a \"virus\" this capable and attribution is going to be 10000x more challenging. Companies that care less about engineering a sandbox and based in other countries. also 'Let's punish the companies that are upfront about incidents' is going to incentivize very harmful behavior.",
+      "gold": "opinion",
+      "predicted": "question"
+    },
+    {
+      "text": "Neat!!! Does this work with mailto, can you embed html into emails?",
+      "gold": "question",
+      "predicted": "evidence"
+    },
+    {
+      "text": "IIRC then normal bank cards and debit cards can be charged with these future payments up to 500 Eur. So for small and normal cars this works.\n\nI too have a real credit card to be able to rent for instance \"bigger\" cars like even an Audi A6.\n\nMost often hotels also block 500 Eur, or they state upfront that you need a proper/real credit card and not just a debit card.\n\nThat's for me the only reason I have VISA and use it like 3 or 4 times a year...",
+      "gold": "experience",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I\u2019m very curious about your esoteric public figures benchmark, do you ask it in English or Korean to identify the person? Does it change the result? I wonder if having data labeled in only a given language (or web sources in only a given language) change the output.",
+      "gold": "question",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Eh, I think you may have just been in a tighter echo chamber on twitter. If you are on bluesky the discover tab is considered a mess and may provide you with things that you aren\u2019t interested in.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Yeah I need more details too. Does Google play trial not auto charge by after the trial ends?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "https://h1bdata.info/index.php?em=microsoft+corporation&job=...\n\nIdk if people don't realize you can look this up? Pay doesn't look suppressed to me....",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I don't think we can do anything substantial. So I'm going to just use this \"suboptimal\" solution.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I feel like most of this was already known when someone here in Dallas figured out they had wifi connectivity you could connect and get access. I may not have the details exactly correct but I think someone got access then.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Oh! How's the text rendering now? In macOS 26 I had to return a new ultrawide because macOS hates non-retina displays and text was blurry af. Worth trying now?",
+      "gold": "question",
+      "predicted": "evidence"
+    },
+    {
+      "text": "The reason I did it the way I did is that I believe that Fable writes better prose than I do. I could write it so that people would be less likely to think it's written by AI, but I wouldn't think it's as good.\n\nSo, I'm happy with it as-is; I think the ideas are good and deserve to be out there. I think it just needs a context where people will be more forgiving about AI prose because they are interested enough in the ideas that are conveyed.\n\nBut of course, the challenge with creating such a context is that one person with an AI could spew out 1,000 crap stories a day and submit them all...",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "That's black and white thinking; it will be a midgularity - so neither.",
+      "gold": "opinion",
+      "predicted": "opinion"
+    },
+    {
+      "text": "Well, actually mostly Average Joes become cops. As a matter of fact those Average Joes stalked on random people with 'LOL' in reason column.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I genuinely don't understand how some people are so self-hating.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "click on the link:\n\n> Licences that are not compatible\n\n> Licences that require downstream attribution\n\n> For practical reasons we require that users of OpenStreetMap data attribute the project as a whole and we in turn provide attribution to third parties via the \"Contributor\" pages. Licences and terms of use that require attribution of the third party data source directly on derived works are incompatible.\n\n\"require attribution of the third party data source directly on derived works\" is exactly what OSM requires. It's hypocrisy of a sorts",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Wait... is that true? I don't think the original Queen Image 2.0 was ever released beyond an API. At least, I don't remember a public weights release.",
+      "gold": "question",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Sure, buddy. Let's just not question anything at all. Move along, don't cause friction.\n\nJesus man.",
+      "gold": "opinion",
+      "predicted": "opinion"
+    },
+    {
+      "text": "my dyslexic ass thought a screen reader program owes gullichsen a billion dollars",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Are you sure? At least with Kodi for specials like Futurama you make a Season 0 with them that the scrapers understand. Seems like Jellyfin understands that too: https://jellyfin.org/docs/general/server/media/shows\n\nI guess for Theatrical TV show movies like The Simpsons Movie it might be more complicated, but worse case you always create or edit your own NFO files with something like MediaElch and have Jellyfin use those.\n\nI think it's better to have genres in the NFO files and not in the folder structure. A show or movie can easily fall into two or genres which is not going to get captured by a single folder.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Sure but that's just kicking the can down the street. It will eventually be susceptible to a collision attack. As will SHA256 btw. What then? Are we doing to go through all this again?\n\nOnline video has handled this. There are various codex, container formats and transport protocols. The TLS handshake does this. The ability to deprecate and replacing the hashing algorithm should've been built in from day 1.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "| Benchmark \u2502 Ninfer-3090 \u2502 Strata |\n\n| --------- \u2502 ----------- \u2502 ------ |\n\n\u2502 Code generation \u2502 52/78 (66.7%) \u2502 70/78 (89.7%) |\n\n\u2502 Code completion \u2502 40/50 (80.0%) \u2502 44/50 (88.0%) |\n\n\u2502 Total \u2502 92/128 (71.9%) \u2502 114/128 (89.1%) |\n\n\u2502 API failures \u2502 10 \u2502 5 |\n\nI wish Markdown tables worked here.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "> We can round up the bits that make up a commit in a SHA-1-based repo, and sign those bits securely; this is a thing that is possible.\n\nYes but as my other comment explains, this is not particularly useful in and of itself.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "All these cameras do is pre-select the images that are worthy uploading. Everything else happens at Flock.\n\nThat's why they don't give anything about the camera's security.\n\nThe images are all from a public place, so no privacy expectations and what's theworst that could happen? Someone uploads their cat images or the pr0n collection?\n\nAi figures that one out rather quickly.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    }
+  ]
+}
