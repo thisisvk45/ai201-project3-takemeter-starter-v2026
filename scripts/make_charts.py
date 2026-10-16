@@ -6,7 +6,7 @@ FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-se
 MONO = "SFMono-Regular, Menlo, Consolas, monospace"
 INK, INK2, MUTED = "#1A1A18", "#4A4A45", "#6B6B64"
 ACC, GRAY, GRID, BORDER, SURF = "#4B54A8", "#9A9A92", "#EEEEEA", "#E3E3DE", "#FFFFFF"
-runs = [("before", "Before", "default settings"), ("after", "After 1", "learning rate 5e-5"), ("after2", "After 2", "plus 30 experience posts")]
+runs = [("before", "Before", "default settings"), ("after", "After 1", "learning rate 0.00005"), ("after2", "After 2", "plus 30 experience posts")]
 data = {k: json.load(open(os.path.join(R, f"results_three_seeds_{k}.json"))) for k, _, _ in runs}
 
 def head(w, h, title, sub):

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-label="What went wrong in unit 6 and what I changed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#4B54A8" stroke-width="1.6"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="360" rx="14" fill="#FFFFFF" stroke="#E3E3DE"/>
+  <text x="30" y="42" font-size="20" font-weight="600" fill="#1A1A18">What went wrong, and what I changed</text>
+  <text x="30" y="66" font-size="13" fill="#6B6B64">One change at a time, each measured on seeds 42, 7 and 2024. Accuracy is the range across the three seeds.</text>
+  <rect x="30" y="92" width="215" height="230" rx="10" fill="#F4F4F1" stroke="#8A8A82"/>
+  <text x="48" y="124" font-size="15" font-weight="600" fill="#1A1A18">Before</text>
+  <text x="48" y="144" font-size="12" fill="#6B6B64">default settings</text>
+  <text x="48" y="182" font-size="11" fill="#6B6B64" letter-spacing="0.4">ACCURACY</text>
+  <text x="48" y="206" font-size="17" font-weight="600" fill="#1A1A18">0.512 on every seed</text>
+  <text x="48" y="244" font-size="12.5" fill="#4A4A45">Every post called opinion.</text>
+  <text x="48" y="263" font-size="12.5" fill="#4A4A45">Loss still falling at epoch 3,</text>
+  <text x="48" y="282" font-size="12.5" fill="#4A4A45">so the model had barely moved.</text>
+  <path d="M248 207.0 H269" stroke="#4B54A8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <rect x="272" y="92" width="215" height="230" rx="10" fill="#F4F4F1" stroke="#8A8A82"/>
+  <text x="290" y="124" font-size="15" font-weight="600" fill="#1A1A18">Fix 1</text>
+  <text x="290" y="144" font-size="12" fill="#6B6B64">learning rate 0.00005</text>
+  <text x="290" y="182" font-size="11" fill="#6B6B64" letter-spacing="0.4">ACCURACY</text>
+  <text x="290" y="206" font-size="17" font-weight="600" fill="#1A1A18">0.610 to 0.780</text>
+  <text x="290" y="244" font-size="12.5" fill="#4A4A45">question learned on all seeds.</text>
+  <text x="290" y="263" font-size="12.5" fill="#4A4A45">experience still 0.00 everywhere:</text>
+  <text x="290" y="282" font-size="12.5" fill="#4A4A45">only 21 training examples.</text>
+  <path d="M490 207.0 H511" stroke="#4B54A8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <rect x="514" y="92" width="215" height="230" rx="10" fill="#EEF0FB" stroke="#4B54A8"/>
+  <text x="532" y="124" font-size="15" font-weight="600" fill="#2A2F6B">Fix 2</text>
+  <text x="532" y="144" font-size="12" fill="#6B6B64">30 more experience posts</text>
+  <text x="532" y="182" font-size="11" fill="#6B6B64" letter-spacing="0.4">ACCURACY</text>
+  <text x="532" y="206" font-size="17" font-weight="600" fill="#4B54A8">0.733 to 0.778</text>
+  <text x="532" y="244" font-size="12.5" fill="#4A4A45">experience up to 0.62 to 0.67.</text>
+  <text x="532" y="263" font-size="12.5" fill="#4A4A45">Criteria 1 and 2 met on all</text>
+  <text x="532" y="282" font-size="12.5" fill="#4A4A45">three seeds. Spread now 0.044.</text>
+  <path d="M732 207.0 H753" stroke="#4B54A8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <rect x="756" y="92" width="215" height="230" rx="10" fill="#FFFFFF" stroke="#E3E3DE" stroke-dasharray="5 4"/>
+  <text x="774" y="124" font-size="15" font-weight="600" fill="#1A1A18">Still broken</text>
+  <text x="774" y="144" font-size="12" fill="#6B6B64">not fixed</text>
+  <text x="774" y="182" font-size="11" fill="#6B6B64" letter-spacing="0.4">WORST LABEL: EVIDENCE</text>
+  <text x="774" y="206" font-size="17" font-weight="600" fill="#1A1A18">F1 0.44 to 0.55</text>
+  <text x="774" y="244" font-size="12.5" fill="#4A4A45">It learned links and tables,</text>
+  <text x="774" y="263" font-size="12.5" fill="#4A4A45">not facts in plain prose.</text>
+  <text x="774" y="282" font-size="12.5" fill="#4A4A45">Next: 30 prose evidence posts.</text>
+  <text x="30" y="342" font-size="12" fill="#6B6B64">Labels, taxonomy and criteria stayed as filed in unit 5. Only the two declared changes moved.</text>
+</svg>
