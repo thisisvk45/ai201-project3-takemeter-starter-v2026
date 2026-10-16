@@ -244,13 +244,34 @@ I thought criteria 1, 2, 3 and 5 might be four problems. When I rechecked the ev
 
 So this is not a label problem. A model that predicts one class gives no evidence about which boundary is inconsistent, and the agreement report can't help here either. Of the four common causes, the closest is "a task the model can't reach from this much data", but the cause sits in the training settings, not the data size. That is why my one improvement is a training setting.
 
+The agreement check (30 / 30, below) found no inconsistency in how the labeller applied a written rule. That fits this diagnosis: nothing points at the labels.
+
 Criterion 4 is MET for a hollow reason. When everything is predicted `opinion`, the confident third is mostly real `opinion` posts, so it scores well. The criterion was measurable, so I did not revise it, but this MET says nothing about whether the model's confidence means anything.
 
 ---
 
 ## Agreement Report
 
-My labels on the 30 staff posts, under the staff taxonomy, are in `my_staff_labels.csv`. They were committed before the staff labels were available. I am waiting on `data/staff_labels.csv` from my TF. This section gets the rate and an adjudication of every disagreement once it arrives.
+Agreement rate: 30 / 30 = 100%. File: `agreement_results.json`. The staff labels came from my TF as a spreadsheet, and I saved them unchanged as `data/staff_labels.csv`. My labels, `my_staff_labels.csv`, were committed before that file existed (commit 1a56634).
+
+Disagreements: none, so there is nothing to adjudicate. Staff flagged 7 of the 30 as hard, and the useful check is whether those landed for the right reason or by luck:
+
+| Post | Staff and me | Rule that decided it |
+|---|---|---|
+| sp_005, carbon plates, then 2% and 2% at 35 vs 50 miles a week | `analysis` | Rule 1: the second sentence's numbers carry the argument |
+| sp_010, three runners within 10 seconds in different shoes | `analysis` | Rule 1: hedged, but the checkable observation is what the claim rests on |
+| sp_014, times down 3% so obviously the shoes | `hot_take` | Rule 1: the 3% decorates a conclusion already reached. It is the taxonomy's own worked example |
+| sp_019, nobody enjoys the long run | `hot_take` | Rule 2: a general claim about everyone, not a report of the writer's run |
+| sp_020, every injury thread is the same | `hot_take` | Rule 1: checkable in principle, but no count is given |
+| sp_028, third DNF this year | `reaction` | Rule 3: the count is there, but nothing is argued from it |
+| sp_029, PB shoes bought in the wrong size | `reaction` | Rule 2: the writer's own realisation, not a claim about shoes in general |
+
+Is the set easy, or is the rule tight? I thought about this before calling 100% a win. Two things make the number weaker than it looks:
+
+1. `staff_posts.csv` is ordered in blocks: posts 1 to 10 are all `analysis`, 11 to 20 all `hot_take`, 21 to 30 all `reaction`. Anyone labelling in order can see the pattern, so 100% here is partly the file and not only the rule.
+2. The staff taxonomy gives three numbered rules with worked examples, and one hard post (sp_014) is copied straight from them. My own taxonomy has one main rule and two short ones, and no worked examples.
+
+What the pattern tells me: there are no disagreements to sort into the three piles, so this check gives no sign of a consistency problem. It also can't prove my own 299 labels are consistent, because they were applied with thinner rules on harder text. The one place I would test that is my `evidence` and `opinion` boundary. That is where the model still fails after improvement 2, and where an unchecked label is most likely to be wrong.
 
 ---
 
@@ -324,4 +345,4 @@ The gap between what I meant my labels to capture and what the model learned: I 
 
 ## How I Used AI in unit 6
 
-Claude ran the baseline and the three seed runs, labelled the 30 staff posts under the staff taxonomy before the staff labels were available, collected and labelled the 30 extra `experience` posts, and drafted the verdicts, diagnoses and write ups above from the result files. I rechecked that every number in this README matches the committed JSON files.
+Claude ran the baseline and the three seed runs, labelled the 30 staff posts under the staff taxonomy before the staff labels were available, ran the agreement check once I got the staff file from my TF, collected and labelled the 30 extra `experience` posts, and drafted the verdicts, diagnoses and write ups above from the result files. I rechecked that every number in this README matches the committed JSON files.
