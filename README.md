@@ -353,4 +353,8 @@ The gap between what I meant my labels to capture and what the model learned: I 
 
 ## How I Used AI in unit 6
 
-Claude ran the baseline and the three seed runs, labelled the 30 staff posts under the staff taxonomy before the staff labels were available, ran the agreement check once I got the staff file from my TF, collected and labelled the 30 extra `experience` posts, and drafted the verdicts, diagnoses and write ups above from the result files. I rechecked that every number in this README matches the committed JSON files.
+I used Claude for a substantial part of this unit: running the experiments, labelling posts, and helping draft the analysis. That included the baseline and three-seed runs, the 30 staff posts, the agreement check after I received the staff labels from my TF, and collecting and labelling the 30 extra `experience` posts. The staff-post labels were made before the reference labels were available.
+
+Claude also drafted the verdicts, diagnoses, and write-ups from the result files. I rechecked the numbers in the README against the committed JSON files. That checks whether the write-up matches the saved results; it does not establish that the labels are right or that every explanation of the results is correct. The labels still need the human review described in “What's Still Broken.”
+
+The main limit is that AI helped produce both the labels and the explanation of what the model learned. Those are not independent checks on each other. The experiment results are useful, but I would not treat the agreement score or the suggested diagnosis as proof that the dataset is reliable. I also used Codex to help edit this disclosure for clarity.
